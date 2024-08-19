@@ -27,7 +27,5 @@ public class SimpleCalculatorTest {
             assertEquals("Only positive", e.getMessage());
         }
         assertEquals(13,simpleCalculator.addPositive(5, 8));
-        // TODO: Continua Otilia.
-
     }
 }
