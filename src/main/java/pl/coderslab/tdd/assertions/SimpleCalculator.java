@@ -6,7 +6,7 @@ public class SimpleCalculator {
 		return x + y;
 	}
 
-	public int addPositve(int x, int y) {
+	public int addPositive(int x, int y) {
 		if (x <= 0 || y <= 0) {
 			throw new IllegalArgumentException("Only positive");
 		} else {
