@@ -7,8 +7,7 @@ import static org.junit.Assert.*;
 public class SampleTest {
 
     @Test
-    public void test1(){
-        assertTrue(1 == 1);
+    public void test1(){assertTrue("S-ar putea sa fi tastat gresit...", 1 == 2);
     }
 
 }

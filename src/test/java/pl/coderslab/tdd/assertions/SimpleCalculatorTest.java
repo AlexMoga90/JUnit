@@ -3,6 +3,7 @@ package pl.coderslab.tdd.assertions;
 import org.junit.Before;
 import org.junit.Test;
 
+
 import static org.junit.Assert.*;
 
 public class SimpleCalculatorTest {
@@ -21,8 +22,9 @@ public class SimpleCalculatorTest {
     @Test
     public void addPositive() {
         try{
-            simpleCalculator.addPositive(-3,2);
-            throw new IllegalArgumentException("Something went wrong");
+            simpleCalculator.addPositive(3,2);
+//            throw new IllegalArgumentException("Something went wrong");
+            fail("Nu avea voie sa ajunga aici.");
         }catch (IllegalArgumentException e){
             assertEquals("Only positive", e.getMessage());
         }
