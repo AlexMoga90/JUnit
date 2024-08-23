@@ -1,6 +1,6 @@
 package pl.coderslab.tdd.junit;
 
-import junit.framework.TestCase;
+import static junit.framework.TestCase.assertEquals;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.equalTo;
@@ -8,9 +8,9 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 
-public class CalculatorTest extends TestCase {
+public class CalculatorTest {
 
-    private Calculator calculator;
+    private Calculator calculator = new Calculator();
 
     public void setUp() {
         this.calculator = new Calculator();
@@ -41,4 +41,13 @@ public class CalculatorTest extends TestCase {
     public void testGreater() {
         assertThat(calculator.greater(10, 5), is(true));
     }
+
+    @Test
+    public void evaluatesExpression() {
+        Calculator calculator = new Calculator();
+        int sum = (int) calculator.eval("1+2*3-5*7/5");
+        assertEquals(0, sum);
+    }
+
+
 }
